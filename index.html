@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>과제</title>
+	<title>질병관리본부</title>
 	<style type="text/css">
 		*{
 			padding: 0;
@@ -17,7 +17,7 @@
 			width: 1300px;
 			height: 100px;
 			margin-top: 10px;
-			
+            border-bottom: solid 1px #cccccc;
 		}
 		#page {
 			width: 1300px;
@@ -27,15 +27,16 @@
 			float: left;
 			margin-top: 10px;
 		}
-		#top {
-			float: right;
-			margin: 30px 20px 0 0;
+        .headerimg {
+            float: right;
+            margin-right: 12px;
         }
         nav {
         	width: 1300px;
-        	height: 70px;
+            height: 70px;
         	margin-top: 10px;
-        	
+            font-weight: bold;
+            color: #878787;
         }
         nav li {
         	display: inline-block;
@@ -47,24 +48,29 @@
         	
         	padding-bottom: 20px;
         }
-        aside {
-        	float: right;
-        	
-        	margin-top: 10px;
-        }
+         aside {
+            float: left;
+            line-height: 250%;
+            margin-top: 10px;
+                }
         aside li {
-        	text-align: right;
-        	margin-bottom: 30px;
-        }
+            margin-bottom: 0px;
+            list-style-type: none;
+                }
         #sub1 img:hover {
-        	box-shadow: 5px 5px 10px gray;
-        	transform: translate(5px,-5px);
+        	transform: scale(1.1);
+            transition: transform 1s;
 
         }
         #sub1 li {
         	display: inline-block;
-        	text-align: center;
-        	padding-right: 20px;
+            overflow: hidden;
+            margin-right: 16px;
+        }
+        #sub1 img{
+            width: 250px;
+            height: 130px;
+            display: block;
         }
         #sub2 li{
         	display: inline-block;
@@ -77,7 +83,7 @@
         	height: 80px;
         	border-radius: 50% 50%;
         }
-	#sub2 img:hover{
+        #sub2 img:hover{
         	transform: scale(1.1);
         }
         #sub3 li {
@@ -100,6 +106,15 @@
         	margin: 10px 0 10px 0;
         	
         }
+         a:link {
+            color: #787878;
+         }
+         a:visited {
+            color: #787878;
+         }
+         a {
+            text-decoration: none;
+         }
         #address {
         	float: left;
         	margin: 10px 0 0 10px;
@@ -108,45 +123,264 @@
         	float: right;
         	margin: 10px 0 0 180px;
         }
+        #searchform{
+            position: absolute;
+            border: solid 2px green;
+            width: 500px;
+            height: 30px;
+            float: left;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        #button {
+            position: relative;
+            left: 533px;
+            top: 30px;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+            width: 34px;
+            height: 34px;
+        }
+        #footer1 {
+            height: 50px;
+        }
+        #footer1 li{
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .dropdown{
+            display: inline-block;
+            float: left;
+            margin: 20px 30px;
+        }
+        .dropdowncontents{
+            display: none;
+            width: 130px;
+            font-size: 12px;
+            border-left: solid 1px #cccccc;
+            border-right : solid 1px #cccccc;
+            border-bottom : solid 1px #cccccc;
+            padding : 0 0 0 0;
+        }
+        .dropdown :hover .dropdowncontents {
+            display: block;
+        }
+        #aside1{
+            text-align: right;
+            float: right;
+            width: 70px;
+                }
+        .imgborder{
+            border: solid 1px #cccccc;
+        }
+        #face{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/facebook.jpg);
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        #twitter{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/twitter.jpg);
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        #naver{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/naver.jpg);
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        #youtube{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/youtube.jpg);
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+        #main3 {
+            float: left;
+            margin-right: 80px;
+        }
+        a#face:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/facebook1.jpg);
+        }
+        a#twitter:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/twitter1.jpg);  
+        }
+        a#naver:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/naver1.jpg);  
+        }
+        a#youtube:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50%;
+            float: left;
+            background: url(./img/kcdc/youtube1.jpg);  
+        }
 	</style>
 	
 </head>
 <body id="page">
 	 <header>
-		 <div id="logo"> <a href="./index.html"><img src="./img/kcdc/logo.jpg"></a> </div>
-		<div id="top"> 로그인 │ 회원가입 │ <a href="./self introduction.html" target="_blank">마이페이지</a> │ 고객센터</div>
+		<div id="logo"> <a href="./index.html"><img src="./img/kcdc/logo.jpg"></a> </div>
+        <div> <input type="text" name="search" id="searchform"></div>
+        <div ><img src="./img/kcdc/search.jpg" width="34px" height="34px" id="button"></div>
+        <div><img src="./img/kcdc/hamburgerbar.jpg" class="headerimg"> <img src="./img/kcdc/ENG.jpg" class="headerimg"></div>
      </header>
      <div class="clear"></div>
 	 <nav>
-	 	<ul>
-			<li><a href="./infection.html">감염병</a></li>
-	 		<li>건강정보</li>
-	 		<li>정책정보</li>
-	 		<li>연구개발</li>
-	 		<li>알림,자료</li>
-	 		<li>간행물,통계</li>
-	 		<li>민원,정보공개</li>
-	 		<li>기관소개</li>
-	 		<li>사업별홈페이지</li>
-	 	</ul>
+	 	<div class="dropdown">
+	 	    <ui><a href="./infection.html" target="_blank">감염병</a>
+            <div class="dropdowncontents">
+                <li>감염병정보</li>
+                <li>해외감염정보</li>
+                <li>감염병유행정보</li>
+                <li>결핵</li>
+                <li>예방접종</li>
+                <li>감염병간행물</li>
+                </div>
+            </ui>
+            </div>
+        </div>
+	 	<div class="dropdown">
+            <ui><a href="./information.html" target="_blank">건강정보</a>
+             <div class="dropdowncontents">
+                <li>손상정보</li>
+                <li>국가건강정보포털</li>
+                <li>희귀질환정보</li>
+                </div>
+                </ui>
+            </div>
+	 	<div class="dropdown">
+            <ui>정책정보
+             <div class="dropdowncontents">
+                <li>감염병</li>
+                <li>생물안전</li>
+                <li>만성질환</li>
+                <li>기후변화</li>
+                <li>의료방사선안전관리</li>
+                <li>장기,조직,혈액관리</li>
+            </div>
+                </ui>
+            </div>
+	 	<div class="dropdown">
+            <ui><a href="./research.html" target="_blank">연구개발</a>
+             <div class="dropdowncontents">
+                <li>질병연구</li>
+                <li>연구성과</li>
+                <li>연구자원인프라</li>
+                <li>생명윤리</li>
+            </div>
+                </ui>
+            </div>
+	 	<div class="dropdown">
+            <ui>알림,자료
+             <div class="dropdowncontents">
+                <li>이달의건강소식</li>
+                <li>보도자료</li>
+                <li>포토뉴스</li>
+                <li>홍보자료</li>
+                <li>공지사항</li>
+                <li>공고/공시</li>
+                <li>채용공고</li>
+                <li>법령,지침,서식</li>
+                </div>
+                </ui>
+                </div>
+	 	<div class="dropdown">
+            <ui>간행물,통계
+             <div class="dropdowncontents">
+                <li>간행물</li>
+                <li>통계</li>
+                <li>연구성과</li>
+                </div>
+                </ui>
+                </div>
+	 	<div class="dropdown">
+            <ui>민원,정보공개
+             <div class="dropdowncontents">
+                <li>1339콜센터</li>
+                <li>민원신청</li>
+                <li>나의민원확인</li>
+                <li>생명윤리법관련민원안내</li>
+                <li>사전정보공표</li>
+                <li>정보공개청구</li>
+                <li>공공데이터</li>
+                <li>기관장업무추진비</li>
+                <li>공무국외여행보고서</li>
+                </div>
+                </ui>
+                </div>
+	 	<div class="dropdown">
+            <ui>기관소개
+             <div class="dropdowncontents">
+                <li>소개</li>
+                <li>비전과미션</li>
+                <li>핵심사업</li>
+                <li>연혁</li>
+                <li>조직,직원찾기</li>
+                <li>정부상징</li>
+                <li>오시는길</li>
+                <li>시설안내</li>
+                <li>누리집이용안내</li>
+                </div>
+                </ui>
+                </div>
+        <div class="dropdown">
+            <ui>사업별홈페이지
+                <div class="dropdowncontents">
+                    <li>감염병포털</li>
+                    <li>결핵제로</li>
+                    <li>예방접종도우미</li>
+                    <li>국립검역소</li>
+                    <li>KISED</li>
+                    <li>국가건강정보포털</li>
+                </div>
+            </ui>
+        </div>
 	 </nav>
-
+     <div class="clear"></div>
 	 <section> <img src="./img/kcdc/main.jpg" width="1080"></section>
 
-	 <aside>
-	 	<ul>
-	 		<li>사용자별맞춤메뉴</li>
-	 		<li>일반</li>
-	 		<li>연구</li>
-	 		<li>언론</li>
-	 	</ul>
-	 </aside>
+	 <aside id="aside1">
+        <ul>
+            <li class="imgborder"><img src="./img/kcdc/menu1.jpg"></li>
+            <li class="imgborder"><img src="./img/kcdc/menu2.jpg"></li>
+            <li class="imgborder"><img src="./img/kcdc/menu3.jpg"></li>
+            <li class="imgborder"><img src="./img/kcdc/menu4.jpg"></li>
+        </ul>
+     </aside>
 	 <section>
 	 	<ul id="sub1">
-	 		<li><img src="./img/kcdc/s1-1.jpg" width="250"><br>온열질환 건강수칙</li> 
-	 		<li><img src="./img/kcdc/s1-2.jpg" width="250"><br>비브리오패혈증 예방수칙</li>
-	 		<li><img src="./img/kcdc/s1-3.jpg" width="250"><br>미세먼지 건강수칙</li>
-	 		<li><img src="./img/kcdc/s1-4.jpg" width="250"><br>코로나19 영상자료</li>
+	 		<li><img src="./img/kcdc/s1-1.jpg"><br>온열질환 건강수칙</li> 
+	 		<li><img src="./img/kcdc/s1-2.jpg"><br>비브리오패혈증 예방수칙</li>
+	 		<li><img src="./img/kcdc/s1-3.jpg"><br>미세먼지 건강수칙</li>
+	 		<li><img src="./img/kcdc/s1-4.jpg"><br>코로나19 영상자료</li>
 	 	</ul>
 	 </section>
 
@@ -160,7 +394,19 @@
 	 		<li><img src="./img/kcdc/s2-6.jpg"><br>공고/공시</li>
 	 	</ul>
 	 </section>
-
+     <div class="clear"></div>
+     <section>
+         <img src="./img/kcdc/main2.jpg">
+     </section>
+     <div class="clear"></div>
+     <section>
+         <img src="./img/kcdc/main3.jpg" width="400px" id="main3">
+         <a href="https://www.facebook.com/koreacdcpr" id="face"></a>
+         <a href="https://www.facebook.com/koreacdcpr" id="twitter"></a>
+         <a href="https://www.facebook.com/koreacdcpr" id="naver"></a>
+         <a href="https://www.facebook.com/koreacdcpr" id="youtube"></a>
+     </section>
+     <div class="clear"></div>
 	 <section>
 	 	<ul id="sub3">
 	 		<li><img src="./img/kcdc/s3-1.jpg"></li>
@@ -170,6 +416,19 @@
 	 	</ul>
 	 </section>
 	 <div class="clear"></div>
+     <footer id="footer1">
+         <ul>
+             <li>관련링크</li>
+             <li><a href="http://www.digitalcpg.kr/" target="_blank"><img src="./img/kcdc/link1.jpg"></a></li>
+             <li><a href="http://www.cdc.go.kr/contents.es?mid=a40504010000" target="_blank"><img src="./img/kcdc/link2.jpg"></a></li>
+             <li><a href="https://ophrp.org/" target="_blank"><img src="./img/kcdc/link3.jpg"></a></li>
+             <li><a href="http://www.know-ckd.org/ckd/main/main.html" target="_blank"><img src="./img/kcdc/link4.jpg"></a></li>
+             <li><a href="https://knhanes.cdc.go.kr/knhanes/main.do" target="_blank"><img src="./img/kcdc/link5.jpg"></a></li>
+             <li><a href="http://library.nih.go.kr/ncmiklib/index/index.do" target="_blank"><img src="./img/kcdc/link6.jpg"></a></li>
+             <li><a href="https://hawelsis.kihasa.re.kr/" target="_blank"><img src="./img/kcdc/link7.jpg"></a></li>
+         </ul>
+     </footer>
+     <div class="clear"></div>
      <footer>
      	<div id="address">
      		<img src="./img/kcdc/address.jpg">
